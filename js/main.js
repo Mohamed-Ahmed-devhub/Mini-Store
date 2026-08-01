@@ -14,7 +14,7 @@ async function getProducts() {
   products.products.forEach(function (product) {
 
     productsContainer.innerHTML += `
-      <div>
+      <div  class="product-card">
         <img src="${product.thumbnail}" width="200">
 
         <h2>${product.title}</h2>
@@ -23,13 +23,15 @@ async function getProducts() {
 
         <p>Brand: ${product.brand}</p>
 
-        <p>⭐ ${product.rating}</p>
+        <p class="rating">⭐ ${product.rating}</p>
 
-        <p>Price: $${product.price}</p>
+        <p class="price">Prise: $${product.price}</p>
 
-        <p>Discount: ${product.discountPercentage}% OFF</p>
+        <p  class="discount">Discount: ${product.discountPercentage}% OFF</p>
 
         <p>Stock: ${product.stock}</p>
+        
+          <button>View Details</button>
       </div>
     `;
 
