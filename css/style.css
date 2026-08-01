@@ -14,11 +14,9 @@
   background-color: white;
   transition: 0.5s;
 }
-
 .product-card:hover{
   transform: translateY(-5px);
 }
-
 
 .product-card img {
   width: 100%;
@@ -37,15 +35,6 @@
   color: white;
   cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
 
 
 

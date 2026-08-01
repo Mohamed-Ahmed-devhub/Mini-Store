@@ -37,5 +37,17 @@ async function getProducts() {
 
   });
 }
-
 getProducts();
+
+
+
+
+const searchInput = document.querySelector("#searchInput");
+searchInput.addEventListener("input",function () {
+  console.log(searchInput.value)
+})
+
+
+
+
+
