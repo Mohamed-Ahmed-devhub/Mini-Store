@@ -10,44 +10,65 @@ async function getProducts() {
   console.log(products);
 
   const productsContainer = document.querySelector("#products");
+  const searchInput = document.querySelector("#searchInput");
 
-  products.products.forEach(function (product) {
 
-    productsContainer.innerHTML += `
-      <div  class="product-card">
-        <img src="${product.thumbnail}" width="200">
+  function displayProducts(productsArray) {
 
-        <h2>${product.title}</h2>
+    productsContainer.innerHTML = "";
 
-        <p>Category: ${product.category}</p>
+    productsArray.forEach(function (product) {
 
-        <p>Brand: ${product.brand}</p>
+      productsContainer.innerHTML += `
+        <div class="product-card">
 
-        <p class="rating">⭐ ${product.rating}</p>
+          <img src="${product.thumbnail}" width="200">
 
-        <p class="price">Prise: $${product.price}</p>
+          <h2>${product.title}</h2>
 
-        <p  class="discount">Discount: ${product.discountPercentage}% OFF</p>
+          <p>Category: ${product.category}</p>
 
-        <p>Stock: ${product.stock}</p>
-        
+          <p>Brand: ${product.brand}</p>
+
+          <p class="rating">⭐ ${product.rating}</p>
+
+          <p class="price">Price: $${product.price}</p>
+
+          <p class="discount">
+            Discount: ${product.discountPercentage}% OFF
+          </p>
+
+          <p>Stock: ${product.stock}</p>
+
           <button>View Details</button>
-      </div>
-    `;
+
+        </div>
+      `;
+
+    });
+
+  }
+
+
+  // عرض كل المنتجات
+  displayProducts(products.products);
+
+
+  // البحث
+  searchInput.addEventListener("input", function () {
+
+    const searchValue = searchInput.value.toLowerCase();
+
+    const result = products.products.filter(function (product) {
+
+      return product.title.toLowerCase().includes(searchValue);
+
+    });
+
+    displayProducts(result);
 
   });
+
 }
+
 getProducts();
-
-
-
-
-const searchInput = document.querySelector("#searchInput");
-searchInput.addEventListener("input",function () {
-  console.log(searchInput.value)
-})
-
-
-
-
-
