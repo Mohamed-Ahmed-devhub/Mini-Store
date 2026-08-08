@@ -1,10 +1,11 @@
 # Mini Store 🛍️
 
-A simple Mini Store project built with HTML, CSS, and JavaScript.
+A simple Mini Store project built with HTML, CSS, Bootstrap, and JavaScript.
 
 ## About The Project
 
-I built this project to practice JavaScript and Fetch API by getting products from an API and displaying them on the page.
+I built this project as a JavaScript practice task.
+The products are fetched from an API and displayed dynamically on the page.
 
 ## Features
 
@@ -12,16 +13,16 @@ I built this project to practice JavaScript and Fetch API by getting products fr
 - Product cards
 - Product image, title, category, brand, rating, price, discount, and stock
 - Search products
-- Responsive product layout
-- Simple hover effects
+- Responsive layout
+- Simple hover effect
 
 ## Technologies Used
 
 - HTML
+- Bootstrap
 - CSS
 - JavaScript
 - Fetch API
-- DummyJSON API
 
 ## API
 
@@ -40,6 +41,10 @@ https://dummyjson.com/products
 - DOM manipulation
 - Events
 - Template literals
+
+## Styling
+
+Most of the UI was built using Bootstrap, with some custom CSS for the product cards and small design adjustments.
 
 ## Project Status
 
